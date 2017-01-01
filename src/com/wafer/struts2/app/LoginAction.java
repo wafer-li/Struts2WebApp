@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.wafer.struts2.Config;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,14 +16,32 @@ import java.sql.Statement;
  * @author Wafer Li
  * @since 17/1/1 22:57
  */
-public class LoginAction extends ActionSupport{
+public class LoginAction {
 
     private String id;
     private String password;
 
+    public String register() throws SQLException {
+        //language=MySQL
+        String sql = "INSERT INTO User(id, password) VALUES (?, ?)";
+
+        Connection connection = Config.getConnection();
+
+        PreparedStatement statement = connection.prepareStatement(sql);
+
+        statement.setObject(1, id);
+        statement.setObject(2, password);
+
+        if(statement.executeUpdate() > 0) {
+            return "SUCCESS";
+        }
+
+        return "ERROR";
+    }
+
     public String login() throws SQLException {
         //language=MySQL
-        String sql = "SELECT id FROM User";
+        String sql = "SELECT id, password FROM User";
 
         Connection connection = Config.getConnection();
 
@@ -32,16 +51,18 @@ public class LoginAction extends ActionSupport{
 
         while (resultSet.next()) {
            String currentId = resultSet.getString("id");
-           if (currentId.equals(id)) {
+           String currentPassword = resultSet.getString("password");
+           if (currentId.equals(id) && currentPassword.equals(password)) {
                statement.close();
                connection.close();
-               return SUCCESS;
+               global.isLogin = true;
+               return "SUCCESS";
            }
         }
 
         statement.close();
         connection.close();
-        return ERROR;
+        return "ERROR";
     }
 
     public String getId() {
