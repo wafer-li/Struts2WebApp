@@ -1,0 +1,10 @@
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211002', '020394858938483484');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211003', '123456789012345678');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211000', '123890987654567890');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211007', '203984756789098746');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211006', '293094857938219293');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211001', '293847565748939292');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211004', '293874657890983278');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211009', '309283948573219823');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211008', '487856984940129023');
+INSERT INTO struts2.Student (student_id, student_num) VALUES ('2014211005', '876453678909876542');
