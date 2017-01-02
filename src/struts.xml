@@ -15,5 +15,10 @@
             <result name="SUCCESS">index.jsp</result>
             <result name="ERROR">error.jsp</result>
         </action>
+
+        <action name="search" class="com.wafer.struts2.app.SearchAction" method="search">
+            <result name="SUCCESS">search_result.jsp</result>
+            <result name="NOT_FOUND">error.jsp</result>
+        </action>
     </package>
 </struts>
