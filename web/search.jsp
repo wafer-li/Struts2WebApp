@@ -12,6 +12,9 @@
     <title>Search</title>
 </head>
 <body>
+
+<h1>Search</h1>
+
 <s:form action="search">
     <s:textfield label="Student ID" name="studentId"/>
     <s:submit label="Search"/>

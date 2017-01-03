@@ -12,6 +12,9 @@
     <title>Register</title>
 </head>
 <body>
+
+<h1>Register</h1>
+
 <s:form action="register">
     <s:textfield name="id" label="Id" type="number" />
     <s:password name="password" label="password"/>

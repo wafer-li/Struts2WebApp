@@ -12,6 +12,9 @@
     <title>Login</title>
 </head>
 <body>
+
+<h1>Login</h1>
+
 <s:form action="login">
     <s:textfield name="id" label="Id" type="number" />
     <s:password name="password" label="password"/>
