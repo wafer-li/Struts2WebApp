@@ -18,7 +18,7 @@
 
         <action name="search" class="com.wafer.struts2.app.SearchAction" method="search">
             <result name="SUCCESS">search_result.jsp</result>
-            <result name="NOT_FOUND">error.jsp</result>
+            <result name="NOT_FOUND">search_not_found.jsp</result>
         </action>
     </package>
 </struts>
